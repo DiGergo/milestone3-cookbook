@@ -19,12 +19,11 @@ def get_home():
 @app.route('/categories')
 def get_categories():
     return render_template("categories.html", categories=mongo.db.categories.find())
-    
-    
+
 @app.route('/get_recipes')
 def get_recipes():
     return render_template("recipes.html", 
-    recipes=mongo.db.recipes.find())    
+    recipes=mongo.db.recipes.find())
     
 @app.route('/view_recipe/<recipe_id>')
 def view_recipe(recipe_id):
@@ -89,8 +88,7 @@ def get_shop():
 def get_edit(recipe_id):
     the_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template('edit.html', recipe= the_recipe)
-    
-    
+
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipes():
     recipes = mongo.db.recipes
