@@ -173,3 +173,10 @@ a {
 .discount {
     text-align: center;
 }
+
+/* ---------------------------- Shop page */
+
+.shop-header {
+    text-align: center;
+    color: #fafafa;
+}
